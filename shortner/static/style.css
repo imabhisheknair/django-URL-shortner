@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Asap:ital,wght@0,400;0,500;1,500&display=swap');
+
+*{
+  box-sizing:border-box;
+}
+body{
+  margin:0;
+  font-family:asap,Arial,Helvetica, serif;
+  display:flex;
+  height:100vh;
+  justify-content:center;
+  background:#f4f4f4;
+}
+.alert {
+  padding: 20px;
+  background-color: green;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.container{
+  margin:1.5em;
+  text-align:center;
+  width:700px;
+  max-width:100%;
+}
+.card{
+  margin:3em 0;
+  background:#fff;
+  padding:1.5em;
+  border-radius:5px;
+  box-shadow:0 2px 4px #ddd;
+}
+.title{
+  margin:0;
+  font-size:49px;
+  line-spacing:-1px;
+  font-weight:700;
+  color:#0186da;
+  text-shadow:0 2px 2px #0186da;
+}
+.sub-title{
+  font-size:36px;
+  line-spacing:-1px;
+  font-weight:700;
+  color:#505050;
+  margin:0 0 1em 0 ;
+}
+form{
+  display:flex;
+  padding:0 1em 1em 1em;
+}
+.url-input{
+  flex:1;
+  height:3em;
+  padding:0 1em;
+  font-size:17px;
+  color:#666;
+  border-radius:5px;
+  border:1px solid #bbb;
+  border-bottom-right-radius:0;
+  border-top-right-radius:0;
+}
+.shorten-btn{
+  cursor:pointer;
+  background:#2c87c5;
+  color:#fff;
+  font-size:17px;
+  font-style:bold;
+  padding:0.5em;
+  border:0;
+  border-radius:5px;
+  border-bottom-left-radius:0;
+  border-top-left-radius:0;
+}
+p{
+  color:#555;
+}

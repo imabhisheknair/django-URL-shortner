@@ -1,0 +1,63 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shorten Now!</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        .alert {
+          padding: 20px;
+          background-color: green;
+          color: white;
+        }
+        .alert-info {
+          padding: 20px;
+          background-color: #4692F9;
+          color: white;
+        }
+
+        .closebtn {
+          margin-left: 15px;
+          color: white;
+          font-weight: bold;
+          float: right;
+          font-size: 22px;
+          line-height: 20px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+
+        .closebtn:hover {
+          color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <p class="title">Short URL</p>
+      <div class="card">
+        <p class="sub-title">Paste the URL to be shortened</p>
+        <form method="post" action="" autocomplete="off"> {% csrf_token %}
+          <input class="url-input" type="url" name="key" placeholder="Enter url here" required>
+          <button class="shorten-btn" type="submit">Shorten</button>
+        </form>
+          {% if short_url %}
+          <div class="alert">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              Shortened url: <a href="{{short_url}}" style="color: yellow;" target="_blank">{{short_url}}</a>
+          </div>
+          {% endif %}
+          {% if info %}
+          <div class="alert-info">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              {{info}} <br>
+              Shortened url: <a href="{{url}}" style="color: yellow;" target="_blank">{{url}}</a>
+          </div>
+          {% endif %}
+      <p>ShortURL.at is a free tool to shorten a URL or reduce a link.
+      <br />Use our URL Shortener to create a shortened link making it easy to remember.</p>
+          <a href="/dashboard">My dashboard</a>
+      </div>
+    </div>
+</body>
+</html>
